@@ -35,13 +35,15 @@ create-react-app myapp
 
 ### 第 2 步: 安裝 ESLint 與 Prettier 模組
 
-在終端機裡，對應專案的根目錄，輸入以下的指令:
+在終端機裡，對應專案的根目錄，輸入以下的指令(選擇其一):
 
 yarn 使用:
 
 ```sh
 yarn add eslint-plugin-prettier prettier eslint-config-react-app eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-react-hooks
 ```
+
+或
 
 npm 使用:
 
