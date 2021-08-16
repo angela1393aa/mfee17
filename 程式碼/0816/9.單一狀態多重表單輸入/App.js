@@ -11,6 +11,8 @@ function App(props) {
     // 1. 從原本的狀態物件拷貝
     // 2. 在拷貝的新物件上處理
     // 用新輸入的屬性與原物件作合併
+    // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E5%90%8D
+    // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax
     const updatedFields = {
       ...fields,
       [e.target.name]: e.target.value,
