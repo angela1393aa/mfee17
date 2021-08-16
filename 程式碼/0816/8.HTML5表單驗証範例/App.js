@@ -8,6 +8,7 @@ function App(props) {
   const handleSubmit = (e) => {
     e.preventDefault()
 
+    // 另一種得到表單輸入值的方式(注意要有欄位需有name屬性才能得到)
     const formData = new FormData(e.target)
     console.log(formData.get('email'))
     console.log(formData.get('username'))
