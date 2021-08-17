@@ -1,28 +1,26 @@
 import React, { useState, useEffect } from 'react'
-// 模擬從伺服器來的資料
-import { data } from './data'
+import { data } from '../data/'
 
-function App() {
+function ProductList(props) {
   const [productData, setProductData] = useState([])
   const [isLoading, setIsLoading] = useState(false)
 
-  // componentDidMount
+  // 模擬一開始 didMount
   useEffect(() => {
-    // 1. 開啟載入狀態 isLoading
+    // 開啟載入用的動畫spinner
     setIsLoading(true)
 
-    // 2. 載入資料(從伺服器載入)
-    // fetch url...
+    // 自伺服器載入資料
     setProductData(data)
 
-    // 3. 關閉載入狀態 isLoading X秒後
+    // 關閉載入用的動畫spinner
     setTimeout(() => {
       setIsLoading(false)
     }, 2000)
   }, [])
 
   const spinner = (
-    <div className="spinner-border text-success" role="status">
+    <div className="spinner-grow text-primary" role="status">
       <span className="sr-only">Loading...</span>
     </div>
   )
@@ -42,4 +40,4 @@ function App() {
   return <>{isLoading ? spinner : display}</>
 }
 
-export default App
+export default ProductList
